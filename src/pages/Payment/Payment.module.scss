@@ -1,0 +1,126 @@
+.sitePayment {
+    height: 560px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 100px;
+
+
+    
+    .textHeader {
+        font-size: 25px;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+
+    .info {
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .ticketInfo {
+        width: 25%;
+        height: 100%;
+        // background-color: green;
+        padding: 20px 80px 0 20px;
+
+
+
+      
+
+            .content {
+                text-transform: uppercase;
+                font-weight: 500;
+                padding-top: 5px;
+
+            }
+        
+
+        .typeTicket {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .back {
+            margin-top: 50px;
+          
+        
+            .backText{
+                padding-left: 15px;
+                font-weight: 500;
+                
+
+            };
+        }
+    }
+
+    .orderInfo {
+        width: 35%;
+        height: 100%;
+        border: 3px solid #ccc;
+        border-radius: 20px;
+    
+        padding: 20px 30px;
+     
+        .labelOrder {
+            font-weight: 500;
+        }
+
+        .iconMethodPayments {
+            padding-top: 10px;
+            .iconMethodPayment {
+                width: 50px;
+                height: 30px;
+                cursor: pointer;
+            }
+        }
+
+        
+        .labelTag {
+            display: flex;
+            justify-content: space-between;
+            padding: 7px 0;
+
+        }
+
+        .viewMethodPayment {
+            color: blue;
+            cursor: pointer;
+        }
+
+        .mt20 {
+            margin-top: 20px;
+        }
+
+        .buttonPayment {
+            margin-top: 15px;
+            width: 100%;
+            background: #1A2C50;
+            border-radius: 8px;
+            color: #FFBE00;
+            height: 40px;
+        }
+    }
+
+
+}
+
+.methodContainer {
+    padding: 0 20px;
+}
+.methodTitle {
+    font-weight: 550;
+    padding: 10px 0;
+
+
+}
+
+.methodPayment {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+
+    
+    .logoMethodPayment {
+        width: 30px;
+        padding-right: 10px;
+    }
+}
