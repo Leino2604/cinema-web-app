@@ -1,12 +1,16 @@
 import React from 'react';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 
+import Home from './pages/Home';
 import ScheduleSelection from './pages/ScheduleSelection';
 import SeatSelection from './pages/SeatSelection';
 import Payment from './pages/Payment';
+import PaymentSuccess from './pages/PaymentSuccess';
 import './App.css';
 
 function App() {
@@ -20,6 +24,7 @@ function App() {
           <Route path="/schedule" element={<ScheduleSelection/>} />
           <Route path="/seats" element={<SeatSelection/>} />
           <Route path="/payment" element={<Payment/>} />
+          <Route path="/payment/success" element={<PaymentSuccess/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
@@ -29,3 +34,6 @@ function App() {
 }
 
 export default App;
+
+
+
