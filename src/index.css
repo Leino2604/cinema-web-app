@@ -7,7 +7,7 @@ body {
   font-family: 'Fira Sans';
   background-color: #f1f1f1;
   position: relative;
-  padding-bottom: 200px;
+  /* padding-bottom: 200px; */
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
