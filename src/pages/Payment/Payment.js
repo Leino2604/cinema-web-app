@@ -18,6 +18,7 @@ return (
     <div className = {styles.sitePayment}>
         <div className= {styles.ticketInfo}>
             <div className = {styles.textHeader}>Thông tin vé</div>
+
             <div className = {styles.info}>
                 <label>Tên phim</label>  
                 <div className= {styles.content}>spiderman no way home</div>  
@@ -105,7 +106,6 @@ return (
             <Button variant="secondary" onClick={handleClose}>
                 Đóng
             </Button>
-
             <Link to = "/seats">
                 <Button style= {{color: '#FFBE00',  backgroundColor: '#1A2C50'}}onClick={handleClose}>
                     Trở lại
