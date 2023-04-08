@@ -17,7 +17,7 @@ function Payment () {
 return (
     <div className = {styles.sitePayment}>
         <div className= {styles.ticketInfo}>
-            <div className = {styles.textHeader}>Lịch chi tiết</div>
+            <div className = {styles.textHeader}>Thông tin vé</div>
             <div className = {styles.info}>
                 <label>Tên phim</label>  
                 <div className= {styles.content}>spiderman no way home</div>  
@@ -27,11 +27,11 @@ return (
                 <div className= {styles.content}>30 June 2023</div>  
             </div>    
             <div className = {`${styles.info} ${styles.typeTicket}`}>
-                <div style={{width: '50%'}}>
+                <div>
                     <label>Loại phim</label>  
                     <div className= {styles.content}>2D</div>  
                 </div>
-                <div style={{width: '50%'}}>
+                <div>
                     <label>Giờ chiếu</label>  
                     <div className= {styles.content}>14:40</div>  
                 </div>
@@ -106,9 +106,11 @@ return (
                 Đóng
             </Button>
 
-            <Button style= {{color: '#FFBE00',  backgroundColor: '#1A2C50'}}onClick={handleClose}>
-                Trở lại
-            </Button>
+            <Link to = "/seats">
+                <Button style= {{color: '#FFBE00',  backgroundColor: '#1A2C50'}}onClick={handleClose}>
+                    Trở lại
+                </Button>
+            </Link>
             </Modal.Footer>
         </Modal>
 
