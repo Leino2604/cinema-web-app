@@ -5,6 +5,35 @@ import {GrLocation} from "react-icons/gr"
 import images from '../../assets/images'
 import { Link } from "react-router-dom";
 
+function Movie(name, price, time, out ){
+  let [activeTime, setActiveTime] = useState(null);
+  const timeButtons = time.map(t => (
+    <button 
+      key={t} 
+      className={`${styles.timeElement} ${out.includes(t) ? styles.disabled : ''} ${activeTime === t ? styles.active : ''}`} 
+      disabled={out.includes(t)}
+      onClick={() => setActiveTime(activeTime === t ? null : t)}
+    >
+      {t}
+    </button>
+  ));
+
+  return (
+    <div className={styles.typeMovie}>
+      <div className={styles.type}>
+        <div className={styles.nameType}>{name}</div>
+        <div className={styles.price}>{price}</div>
+      </div>
+      <div className={styles.timeMovie}>
+        {timeButtons}
+      </div>
+    </div>
+  );
+}
+
+
+
+
 function ScheduleSelection() {
   const day = ['Sun', 'Mon', 'Tue', 'Web', 'Thu', 'Fri', 'Sat'];
   const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -67,99 +96,23 @@ function ScheduleSelection() {
               <AiOutlineSearch className = {styles.iconSearch}/>
           </div>
         </div>
+         
         <div className = {styles.Cinemas}>
           <div className = {styles.nameCinema}>HA NOI CGV 1</div>
           <div className = {styles.numberCinema}>Rạp số 1</div>
-          <div className = {styles.typeMovie}>
-              <div className = {styles.type}>
-                  <div className = {styles.nameType}>REGULAR 2D</div>
-                  <div className = {styles.price}>VND 45.000 - 50.0000</div>
-              </div>
-              <div className = {styles.timeMovie}>
-                <button disabled className = {`${styles.timeElement} ${styles.disabled}`}>11:00</button>
-                <button disabled className = {`${styles.timeElement} ${styles.disabled}`}>12:00</button>
-                <button className = {`${styles.timeElement}`}>13:00</button>
-                <button className = {styles.timeElement}>14:00</button>
-                <button className = {styles.timeElement}>15:00</button>
-                <button className = {styles.timeElement}>16:00</button>
-                <button className = {styles.timeElement}>17:00</button>
-              </div>
-          </div>
-
-          <div className = {styles.typeMovie}>
-              <div className = {styles.type}>
-                  <div className = {styles.nameType}>GOLD class 2d</div>
-                  <div className = {styles.price}>VND 45.000 - 50.0000</div>
-              </div>
-              <div className = {styles.timeMovie}>
-                <button disabled className = {`${styles.timeElement} ${styles.disabled}`}>11:00</button>
-                <button disabled className = {`${styles.timeElement} ${styles.disabled}`}>12:00</button>
-                <button className = {styles.timeElement}>13:00</button>
-                <button className = {`${styles.timeElement} ${styles.active}`}>14:40</button>
-                <button className = {styles.timeElement}>16:00</button>
-                <button className = {styles.timeElement}>17:00</button>
-                <button className = {styles.timeElement}>18:00</button>
-              </div>
-          </div>
+          
+          {Movie("REGULAR 2D", "VND " + "45.000 - 50.000", ["11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"], ["11:00", "13:00"])}
+          {Movie("GOLD class 2d", "VND " + "80.000 - 100.000", ["11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"], ["11:00"])}
         </div>
 
         <div className = {styles.Cinemas}>
           <div className = {styles.nameCinema}>HA NOI CGV 2</div>
           <div className = {styles.numberCinema}>Rạp số 2</div>
-          <div className = {styles.typeMovie}>
-              <div className = {styles.type}>
-                  <div className = {styles.nameType}>REGULAR 2D</div>
-                  <div className = {styles.price}>VND 45.000 - 50.0000</div>
-              </div>
-              <div className = {styles.timeMovie}>
-                <button disabled className = {`${styles.timeElement} ${styles.disabled}`}>11:00</button>
-                <button className = {styles.timeElement}>12:00</button>
-                <button className = {`${styles.timeElement}`}>13:00</button>
-                <button className = {styles.timeElement}>14:00</button>
-                <button className = {styles.timeElement}>15:00</button>
-                <button className = {styles.timeElement}>16:00</button>
-                <button className = {styles.timeElement}>17:00</button>
-              </div>
-          </div>
-
-          
+          {Movie("REGULAR 2D", "VND " + "45.000 - 50.000", ["11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"], ["11:00", "14:00"])}
+          {Movie("GOLD class 2d", "VND " + "80.000 - 100.000", ["11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"], ["11:00"])}
         </div>
 
-        <div className = {styles.Cinemas}>
-          <div className = {styles.nameCinema}>HA NOI CGV 3</div>
-          <div className = {styles.numberCinema}>Rạp số 2</div>
-          <div className = {styles.typeMovie}>
-              <div className = {styles.type}>
-                  <div className = {styles.nameType}>REGULAR 2D</div>
-                  <div className = {styles.price}>VND 45.000 - 50.0000</div>
-              </div>
-              <div className = {styles.timeMovie}>
-                <button disabled className = {`${styles.timeElement} ${styles.disabled}`}>11:00</button>
-                <button className = {styles.timeElement}>12:00</button>
-                <button className = {styles.timeElement}>13:00</button>
-                <button className = {`${styles.timeElement}`}>14:40</button>
-                <button className = {styles.timeElement}>15:00</button>
-                <button className = {styles.timeElement}>16:00</button>
-                <button className = {styles.timeElement}>17:00</button>
-              </div>
-          </div>
-
-          <div className = {styles.typeMovie}>
-              <div className = {styles.type}>
-                  <div className = {styles.nameType}>GOLD class 2d</div>
-                  <div className = {styles.price}>VND 100.000 - 150.0000</div>
-              </div>
-              <div className = {styles.timeMovie}>
-                <button disabled className = {`${styles.timeElement} ${styles.disabled}`}>11:00</button>
-                <button className = {styles.timeElement}>12:00</button>
-                <button className = {`${styles.timeElement}`}>13:00</button>
-                <button className = {styles.timeElement}>14:00</button>
-                <button className = {styles.timeElement}>15:00</button>
-                <button className = {styles.timeElement}>16:00</button>
-                <button className = {styles.timeElement}>17:00</button>
-              </div>
-          </div>
-        </div>
+       
 
         
 
