@@ -1,0 +1,74 @@
+.App {
+  text-align: center;
+}
+
+.Description {
+  text-align: right;
+  margin-right: 100px;
+}
+.SeatStatus {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.Container {
+  margin: 0 auto;
+  align-items: center;
+  width: 800px;
+  height: 500px;
+  perspective: 1000px;
+  margin-bottom: 30px;
+  background-color: aquamarine;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: black;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.Seat {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.Seat.Selected {
+  background-color: rgb(102, 204, 255);
+  color: white;
+}
+
+.Seat.Sold {
+  background-color: blue;
+  color: white;
+}
+
+.Seat:not(.Sold):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.Container .Seat:not(.Sold):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.Container li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.Row {
+  display: flexbox;
+}

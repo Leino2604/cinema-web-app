@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 
 import Home from './pages/Home';
 import ScheduleSelection from './pages/ScheduleSelection';
-import SeatSelection from './pages/SeatSelection';
+import SeatSelection from './pages/SeatSelection/SeatSelection';
 import Payment from './pages/Payment';
 import PaymentSuccess from './pages/PaymentSuccess';
 import './App.css';
