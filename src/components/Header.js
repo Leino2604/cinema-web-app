@@ -9,21 +9,21 @@ function Header() {
     <>
       <Nav>
         <NavLink to='/'>
-          <a href='./'><img src={Logo} alt='Logo' /></a>
+          <img src={Logo} alt='Logo' />
         </NavLink>
         <Bars />
 
         <NavMenu>
-          <NavLink to='/' activeStyle>
+          <NavLink to='/' activestyle = "true">
             About
           </NavLink>
-          <NavLink to='/' activeStyle>
+          <NavLink to='/' activestyle = "true">
             Services
           </NavLink>
-          <NavLink to='/' activeStyle>
+          <NavLink to='/' activestyle = "true">
             Contact Us
           </NavLink>
-          <NavLink to='/' activeStyle>
+          <NavLink to='/' activestyle = "true">
             Sign Up
           </NavLink>
           <NavBtn>
