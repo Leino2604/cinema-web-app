@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 import Home from './pages/Home';
+import Revenue from './pages/Revenue';
 import ScheduleSelection from './pages/ScheduleSelection';
 import SeatSelection from './pages/SeatSelection/SeatSelection';
 import Payment from './pages/Payment';
@@ -25,6 +26,7 @@ function App() {
           <Route path="/seats" element={<SeatSelection/>} />
           <Route path="/payment" element={<Payment/>} />
           <Route path="/payment/success" element={<PaymentSuccess/>} />
+          <Route path="/revenue" element={<Revenue/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
