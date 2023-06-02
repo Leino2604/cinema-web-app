@@ -12,6 +12,7 @@ import ScheduleSelection from './pages/ScheduleSelection';
 import SeatSelection from './pages/SeatSelection/SeatSelection';
 import Payment from './pages/Payment';
 import PaymentSuccess from './pages/PaymentSuccess';
+import MovieManagement from './pages/MovieManagement'
 import './App.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/payment" element={<Payment/>} />
           <Route path="/payment/success" element={<PaymentSuccess/>} />
           <Route path="/revenue" element={<Revenue/>} />
+          <Route path="/moviemanagement" element={<MovieManagement/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
