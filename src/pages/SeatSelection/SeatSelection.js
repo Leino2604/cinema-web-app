@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import './SeatStyle.css'
+import {Link} from "react-router-dom"
+import { Button} from 'react-bootstrap';
 
 function SeatSelection() {
 
@@ -185,7 +187,13 @@ function SeatSelection() {
           </div>
       </div>
       <div>
-        <h2>Total seats selected: {numSelectedSeats}</h2>
+        <div>
+          <h2>Total seats selected: {numSelectedSeats}</h2>
+        </div>
+        <Link to = "/payment">
+            <Button>Tiếp theo</Button>
+
+        </Link>
       </div>
     </div>
   );

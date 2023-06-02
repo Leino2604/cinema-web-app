@@ -22,11 +22,11 @@ const Home = () => {
   }, [navigate]);
 
   const onSpidermanNoWayHomeClick = useCallback(() => {
-    navigate("/choosing-schedule");
+    navigate("/schedule");
   }, [navigate]);
 
   const onSpidermanNoWayHome1Click = useCallback(() => {
-    navigate("/choosing-schedule");
+    navigate("/schedule");
   }, [navigate]);
 
   return (

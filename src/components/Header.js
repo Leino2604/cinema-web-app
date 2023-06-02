@@ -1,10 +1,24 @@
-import React from 'react';
+import React , {useState} from 'react';
 import './Header.css';
 import Logo from '../assets/img/logo.png';
 import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './HeaderElement';
-
-
+import { BiLogOut } from "react-icons/bi"
+import { useSelector,  useDispatch} from "react-redux";
+import { useNavigate} from "react-router-dom"
+import {logoutUser} from "../redux/apiRequest"
+import axios from "axios"
 function Header() {
+  const user = useSelector((state) => state.auth.login.currentUser)
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const aToken = user?.aToken;
+  const id = user?._id;
+  
+  const axiosJWT = axios.create()
+  const handleLogOut = () => {
+    logoutUser(dispatch, id, navigate, aToken, axiosJWT);
+  }
+
   return (
     <>
       <Nav>
@@ -23,12 +37,26 @@ function Header() {
           <NavLink to='/' activestyle = "true">
             Contact Us
           </NavLink>
-          <NavLink to='/' activestyle = "true">
-            Sign Up
-          </NavLink>
-          <NavBtn>
-            <NavBtnLink to='/'>Sign In</NavBtnLink>
-          </NavBtn>
+          {user? (
+            <>
+            <img  src= "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/340px-Default_pfp.svg.png" alt='Default Avatar' style={{ width: '30px', height: '30px', marginLeft: '10px' }} />
+            <span style = {{color: "#fff"}}> {user.username}  </span>
+            
+            <NavLink onClick = {handleLogOut}to="/home" className="navbar-logout"> 
+              <BiLogOut style= {{color: "#fff", fontSize: "30px"}}/>
+            </NavLink>
+            </>
+          ) : (    
+            <>
+            <NavLink to='/signup' activestyle = "true">
+              Sign Up
+            </NavLink>
+            <NavBtn>
+              <NavBtnLink to='/login'>Sign In</NavBtnLink>
+            </NavBtn>
+          </>
+)}
+          
         </NavMenu>
 
         
