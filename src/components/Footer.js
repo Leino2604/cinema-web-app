@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import GooglePlay from "../assets/img/Google Play x4.png";
 import AppStore from "../assets/img/App Store x4.png";
-import Logo from "../assets/img/logo.png";
+// import Logo from "../assets/img/logo.png";
 
 import Facebook from "../assets/img/facebook.png";
 import Instagram from "../assets/img/instagram.png";
@@ -17,51 +17,51 @@ function Footer() {
           <div className="footer-links">
             <div className="footer-links-div">
               <h4>Company</h4>
-              <a href="#">
+              <a href="/">
                 <p>Contact Us</p>
               </a>
-              <a href="#">
+              <a href="/">
                 <p>Sponsors</p>
               </a>
-              <a href="#">
+              <a href="/">
                 <p>Partners</p>
               </a>
             </div>
 
             <div className="footer-links-div">
               <h4>About</h4>
-              <a href="#">
+              <a href="/">
                 <p>News</p>
               </a>
-              <a href="#">
+              <a href="/">
                 <p>Cinema</p>
               </a>
-              <a href="#">
+              <a href="/">
                 <p>My Tickets</p>
               </a>
-              <a href="#">
+              <a href="/">
                 <p>Payment</p>
               </a>
-              <a href="#">
+              <a href="/">
                 <p>Install</p>
               </a>
             </div>
 
             <div className="footer-links-div">
               <h4>Support</h4>
-              <a href="#">
+              <a href="/">
                 <p>FAQ</p>
               </a>
-              <a href="#">
+              <a href="/">
                 <p>Help Center</p>
               </a>
-              <a href="#">
+              <a href="/">
                 <p>Privacy Policy</p>
               </a>
-              <a href="#">
+              <a href="/">
                 <p>Terms and Conditions</p>
               </a>
-              <a href="#">
+              <a href="/">
                 <p>Update Covid-19</p>
               </a>
             </div>
@@ -69,17 +69,17 @@ function Footer() {
             <div className="footer-links-div">
               <h4>Follow on</h4>
               <div className="social-media">
-                <a href="#">
-                  <img src={Facebook} />
+                <a href="/">
+                  <img alt = "" src={Facebook} />
                 </a>
-                <a href="#">
-                  <img src={Instagram} />
+                <a href="/">
+                  <img alt = "" src={Instagram} />
                 </a>
-                <a href="#">
-                  <img src={Twitter} />
+                <a href="/">
+                  <img alt = "" src={Twitter} />
                 </a>
-                <a href="#">
-                  <img src={Youtube} />
+                <a href="/">
+                  <img alt = "" src={Youtube} />
                 </a>
               </div>
 
@@ -87,10 +87,10 @@ function Footer() {
 
               <h4>Download on</h4>
               <div className="download-app">
-                <a href="#">
+                <a href="/">
                   <img src={GooglePlay} alt="Google Play" />
                 </a>
-                <a href="#">
+                <a href="/">
                   <img src={AppStore} alt="App Store" />
                 </a>
               </div>

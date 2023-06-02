@@ -17,16 +17,16 @@ import styles from "./Home.module.css";
 const Home = () => {
   const navigate = useNavigate();
 
-  const onRegisterTextClick = useCallback(() => {
-    navigate("/sign-up-tix-id");
-  }, [navigate]);
+  // const onRegisterTextClick = useCallback(() => {
+  //   navigate("/sign-up-tix-id");
+  // }, [navigate]);
 
   const onSpidermanNoWayHomeClick = useCallback(() => {
-    navigate("/choosing-schedule");
+    navigate("/schedule");
   }, [navigate]);
 
   const onSpidermanNoWayHome1Click = useCallback(() => {
-    navigate("/choosing-schedule");
+    navigate("/schedule");
   }, [navigate]);
 
   return (

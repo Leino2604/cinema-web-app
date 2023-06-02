@@ -5,7 +5,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 import Home from './pages/Home';
 import Revenue from './pages/Revenue';
 import ScheduleSelection from './pages/ScheduleSelection';
@@ -15,20 +16,31 @@ import PaymentSuccess from './pages/PaymentSuccess';
 import './App.css';
 
 function App() {
+  const Layout = ({ children }) => {
+    return (
+      <>
+      <Header />
+          {children}
+      <Footer />
+      </>
+    );
+  };
+    
   return (
     <div>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/home" element={<Home/>} />
-          <Route path="/schedule" element={<ScheduleSelection/>} />
-          <Route path="/seats" element={<SeatSelection/>} />
-          <Route path="/payment" element={<Payment/>} />
-          <Route path="/payment/success" element={<PaymentSuccess/>} />
-          <Route path="/revenue" element={<Revenue/>} />
-        </Routes>
-        <Footer />
+     <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />}  />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/" element={ <Layout> <Home /> </Layout>}/> 
+        <Route path="/home" element={ <Layout> <Home /> </Layout>}/> 
+        <Route path="/schedule" element={ <Layout> <ScheduleSelection /> </Layout>} />
+        <Route path="/seats" element={ <Layout> <SeatSelection /> </Layout>} />
+        <Route path="/payment" element={<Layout> <Payment /> </Layout>} />
+        <Route path="/payment/success" element={<Layout> <PaymentSuccess /> </Layout>} />
+        <Route path="/revenue" element={<Layout> <Revenue /> </Layout>} />
+      </Routes>
+
       </BrowserRouter>
     </div>
     

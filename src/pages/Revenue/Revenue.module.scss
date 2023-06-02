@@ -67,15 +67,15 @@
     padding: 0 50px;
     margin-bottom: 50px;
     .chart {
-        width: 65%;
+        width: 60%;
     
     
         // background: green;
     }
 
-    .trending {
+    .revenueTheater {
         margin-left: 50px;
-        width: 30%;
+        width: 35%;
         border: 1px solid #ccc;
         border-radius: 10px;
         
@@ -94,11 +94,13 @@
                 font-size: 20px;
                 padding-left: 15px;  
                 padding-top: 25px; 
+                // display: flex;
                 
                 .attr {
-                    
+                    width: 40%;
                 }
                 .valueSale {
+                    padding-left: 30px;
                     font-weight: 600;
                 }
             }
