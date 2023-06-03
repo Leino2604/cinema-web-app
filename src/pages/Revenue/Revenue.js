@@ -156,9 +156,9 @@ const Revenue = () => {
   
     return (
       <div className = {styles.tableChart}>
-        <div style={{ width: "800px" }}>
+        <div style={{paddingLeft: "0",  width: "850px" }}>
           {/* Bảng TOP5 */}
-          <Table style= {{width: "100%"}}>
+          <Table style= {{margin: "0 50px", width: "100%"}}>
             <thead>    
                  <tr>
                    <th style={{width: "5%"}}>ID</th>
@@ -179,18 +179,18 @@ const Revenue = () => {
               </tbody>
           </Table>
           {/* Nút chi tiết để xem chi rõ hơn */}
-          <Button variant="primary" onClick={handleShowModal}>
+          <Button className = {styles.viewDetail}variant="primary" onClick={handleShowModal}>
             Xem chi tiết
           </Button>
           <Modal show={str_ === "Movie" ? showModalMovie : showModalFood} onHide={handleCloseModal}>
             {/* Modal food và ticket */}
-            <Modal.Header style= {{width: "800px" ,backgroundColor: "#fff" }} closeButton>
+            <Modal.Header style= {{width: "850px" ,backgroundColor: "#fff" }} closeButton>
                  <Modal.Title>
                    Doanh thu bán {(str_ === "food") ? "đồ ăn" : "vé"} tháng {month}
                    {/* {str_ == "food"} ? "Doanh thu bán đồ ăn của rạp tháng {month}" :   */}
                  </Modal.Title>
                </Modal.Header>
-               <Modal.Body style= {{width: "800px" ,backgroundColor: "#fff" }} className = {styles.revenueDetail}>
+               <Modal.Body style= {{width: "850px" ,backgroundColor: "#fff" }} className = {styles.revenueDetail}>
                  {showReport ? (
                   <Table style= {{width: "850px" ,backgroundColor: "#fff" }} >
                     <thead>
@@ -235,13 +235,13 @@ const Revenue = () => {
                   </Table>
                 )}
               </Modal.Body>
-              <Modal.Footer style= {{width: "800px" ,backgroundColor: "#fff" }}>
+              <Modal.Footer style= {{width: "850px" ,backgroundColor: "#fff" }}>
                 {showReport ? (
-                  <Button variant="primary" onClick={handleDownloadReport}>
+                  <Button style = {{marginRight: "80px"}}variant="primary" onClick={handleDownloadReport}>
                     Tải báo cáo
                   </Button>
                 ) : (
-                  <Button variant="secondary" onClick={() => setShowReport(true)}>
+                  <Button style = {{marginRight: "80px"}} variant="secondary" onClick={() => setShowReport(true)}>
                     Xem toàn bộ
                   </Button>
                 )}
@@ -286,8 +286,8 @@ const Revenue = () => {
                 <option value="2023">2023</option>
               </select>
             </div>
-            {console.log(month, year)}
-            <Button onClick ={handleSelectMonthYear}>Xác nhận</Button>
+
+            <Button className = {styles.accept} onClick ={handleSelectMonthYear}>Xác nhận</Button>
         </div>
         
         {/* Tổng doanh thu, doanh thu vé, doanh thu thức ăn*/}
@@ -330,12 +330,12 @@ const Revenue = () => {
       
         <div>
            <div className = {styles.tableChartContainer}>
-               <h1 style = {{textAlign: "center"}}>Top 4 bộ phim doanh thu cao nhất tháng {month}</h1>
+               <div className = {styles.title} >Top 4 bộ phim doanh thu cao nhất tháng {month}</div>
                {TableandChart(monthRevenueFilms.slice(0,4), monthRevenueFilms.slice(0,6), "Movie", monthRevenueFilms )}
            </div>
 
            <div className = {styles.tableChartContainer}>
-               <h1 style = {{textAlign: "center"}}>Top 4 món ăn doanh thu cao nhất tháng {month}</h1>
+               <div className = {styles.title} >Top 4 món ăn doanh thu cao nhất tháng {month}</div>
               {TableandChart(monthRevenueFoods.slice(0,4), monthRevenueFoods.slice(0,6), "food", monthRevenueFoods )}
             </div>  
           

@@ -1,4 +1,4 @@
-import React , {useState} from 'react';
+import React  from 'react';
 import './Header.css';
 import Logo from '../assets/img/logo.png';
 import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './HeaderElement';
@@ -9,6 +9,7 @@ import {logoutUser} from "../redux/apiRequest"
 import axios from "axios"
 function Header() {
   const user = useSelector((state) => state.auth.login.currentUser)
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const aToken = user?.aToken;
@@ -21,7 +22,7 @@ function Header() {
 
   return (
     <>
-      <Nav>
+      <Nav style = {{padding: "10px 150px"}}>
         <NavLink to='/'>
           <img src={Logo} alt='Logo' />
         </NavLink>
@@ -40,11 +41,38 @@ function Header() {
           {user? (
             <>
             <img  src= "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/340px-Default_pfp.svg.png" alt='Default Avatar' style={{ width: '30px', height: '30px', marginLeft: '10px' }} />
-            <span style = {{color: "#fff"}}> {user.username}  </span>
+            <span style = {{paddingLeft: "20px", color: "#fff"}}> {user.username}  </span>
             
             <NavLink onClick = {handleLogOut}to="/home" className="navbar-logout"> 
               <BiLogOut style= {{color: "#fff", fontSize: "30px"}}/>
             </NavLink>
+
+            {user.role === "Manage" ? (
+                <>
+                  <NavLink style = {{paddingLeft: "10px",color: "#fff", textDecoration: "none"}}to="/revenue" className="navbar-revenue"> 
+                    Thống kê doanh thu
+                  </NavLink>
+
+                  <NavLink style = {{color: "#fff", textDecoration: "none"}}to="/management" className="navbar-manage"> 
+                    Quản lý phim/món ăn
+                  </NavLink>
+                </>
+
+                
+            ) : (
+                <></>
+            )}  
+
+          {user.role === "Admin" ? (
+                <>
+                  <NavLink to="/manageAccount" className="navbar-logout"> 
+                    Tạo account
+                  </NavLink>
+                </>
+            ) : (
+                <></>
+            )}  
+
             </>
           ) : (    
             <>

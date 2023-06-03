@@ -26,6 +26,15 @@ const authController = {
             const user = await newUser.save();
             return res.status(200).json(user);
         }catch(err) {
+            const user = await User.findOne({ username: req.body.username });
+            const email = await User.findOne({ email: req.body.email });
+            if(user) {
+                return res.status(409).json("Tên username đã tồn tại");
+            }
+            if(email) {
+                return res.status(409).json("Email đã được đăng ký");   
+            }
+
             return res.status(500).json(err)
         }
     },
@@ -36,7 +45,7 @@ const authController = {
             role: user.role
         },
         "access_key_cinema",
-        {expiresIn: "30s"}
+        {expiresIn: "30d"}
         );
     },
 
@@ -55,14 +64,14 @@ const authController = {
         try {
             const user = await User.findOne({ username: req.body.username });
             if (!user) {
-                return res.status(404).json("Incorrect username");
+                return res.status(404).json("Tên đăng nhập không chính xác");
             }
             const validPassword = await bcrypt.compare(
                 req.body.password,
                 user.password
             );
             if (!validPassword) {
-                return res.status(404).json("Incorrect password");
+                return res.status(404).json("Mật khẩu không chính xác. Xin nhập lại");
             }
 
             if(user && validPassword) {

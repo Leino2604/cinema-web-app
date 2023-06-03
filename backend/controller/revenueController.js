@@ -43,10 +43,10 @@ const revenueController = {
 
     handleDataRevenue:  (req,res) => {
         try {
-            const {
-                year,
-                month
-              } = req.query;
+            
+              const date = new Date();
+              const month = req.query.month || date.getMonth() + 1;
+              const year = req.query.year || date.getFullYear();
               const start = new Date(year, month - 1, 1).toISOString().slice(0, 10);
               const end = new Date(year, month, 1).toISOString().slice(0, 10);
               // Xử lý doanh thu tháng (vé, thức ăn, tổng)
@@ -321,7 +321,8 @@ const revenueController = {
                 },
                 {
                   $sort: {
-                    total_revenue: -1
+                    total_revenue: -1,
+                    theater_name: 1,
                   }
                 },
               ]
@@ -362,6 +363,7 @@ const revenueController = {
                     {
                       $sort: {
                         total_revenue: -1,
+                        name: 1,
                       },
                     },
                   ],
@@ -390,6 +392,7 @@ const revenueController = {
                     {
                       $sort: {
                         total_revenue: -1,
+                        name: 1
                       },
                     },
                   ],
@@ -423,7 +426,35 @@ const revenueController = {
         }catch(err) {
             return res.status(500).json(err)
         }
-    }
+    },
+
+    getScheduleOfFilm: (req,res) => {
+      try {
+          const date = new Date();
+          const month = req.query.month || date.getMonth() + 1;
+          const year = req.query.year || date.getFullYear();
+          // console.log(month, year);
+          let start = '';
+          let end = '';
+          let query = {};
+
+          if (month && year) {
+              start = new Date(year, month - 1, 1).toISOString().slice(0, 10);
+              end = new Date(year, month, 1).toISOString().slice(0, 10);
+              query = {
+              date: { $gt: start, $lte: end },
+              };
+          }
+          Revenue.find(query)
+              .then((revenues) => res.json(revenues))
+              .catch((err) => {
+              console.error(err);
+              res.json({ error: err.message });
+              });
+      }catch(err) {
+          return res.status(500).json(err)
+      }
+  },
 }
 
 module.exports = revenueController;

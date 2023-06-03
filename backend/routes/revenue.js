@@ -9,4 +9,7 @@ router.get('/revenueData', revenueController.getDataRevenue)
 // handle data revenue
 router.get('/revenue', revenueController.handleDataRevenue)
 
+router.get('/revenue/:film/:city', revenueController.getScheduleOfFilm)
+
+
 module.exports = router;

@@ -3,3 +3,22 @@
     height: 100%;
     align-items: center;
 }
+
+.navbar-revenue {
+    color: #ccc;
+    background-color: green;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-left: 100px;
+}
+
+.navbar-manage {
+    color: #ccc;
+    background-color: rgb(188, 186, 44);
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+

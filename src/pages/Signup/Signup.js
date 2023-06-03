@@ -30,13 +30,13 @@ const Signup = () => {
             <div className= {styles.formTitle}>Sign up</div>
             <form onSubmit= {handleSignup} className = {styles.form}>
                 <label className = {styles.label} htmlFor="username">Username</label>
-                <input onChange = {(e) => setUsername(e.target.value)} className = {`${styles.input} ${styles.label}` } type="text"  required />
+                <input placeholder = "Enter username" onChange = {(e) => setUsername(e.target.value)} className = {`${styles.input} ${styles.label}` } type="text"  required />
                 <label className = {styles.label} htmlFor="password">Password</label>
-                <input onChange = {(e) => setPassword(e.target.value)} className = {`${styles.input} ${styles.label}` } type="password"  required />
+                <input minLength = "6" placeholder = "Enter password" onChange = {(e) => setPassword(e.target.value)} className = {`${styles.input} ${styles.label}` } type="password"  required />
                 <label className = {styles.label} htmlFor="email">Email</label>
-                <input onChange = {(e) => setEmail(e.target.value)} className = {`${styles.input} ${styles.label}` } type="email" required />
+                <input placeholder = "Enter email" onChange = {(e) => setEmail(e.target.value)} className = {`${styles.input} ${styles.label}` } type="email" required />
                 <label className = {styles.label} htmlFor="phone">Phone</label>
-                <input onChange = {(e) => setPhone(e.target.value)} className = {`${styles.input} ${styles.label}` } type="tel" pattern="[0-9]{10}" required />
+                <input placeholder = "Enter phone" onChange = {(e) => setPhone(e.target.value)} className = {`${styles.input} ${styles.label}` } type="tel" pattern="[0-9]{10}" required />
                 <label className = {styles.label} htmlFor="dob">Date of Birth</label>
                 <input onChange = {(e) => setDob(e.target.value)} className = {`${styles.input} ${styles.label}` } type="date" id="dob" required />
                 <input className = {`${styles.input} ${styles.signIn}` } type="submit" value = "Sign up"/> 

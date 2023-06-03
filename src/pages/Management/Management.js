@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { BsFillTrashFill, BsFillPencilFill } from "react-icons/bs";
-import './MovieManagement.css'
+import './Management.css'
 
 function Table({ rows, deleteRow, editRow }) {
     return (
@@ -161,7 +161,7 @@ return (
     );
   }
 
-function MovieManagement() {
+function Management() {
     const [modalOpen, setModalOpen] = useState(false);
   const [rows, setRows] = useState([{
     id: 1,
@@ -209,7 +209,8 @@ function MovieManagement() {
   };
 
   return (
-    <div className="Movie">
+    <div>
+      <div className="Movie">
       <h1>Quản lí phim</h1>
       <Table rows={rows} deleteRow={handleDeleteRow} editRow={handleEditRow} />
       <button onClick={() => setModalOpen(true)} className="btn">
@@ -226,6 +227,8 @@ function MovieManagement() {
         />
       )}
     </div>
+
+    </div>
   );
 }
-export default MovieManagement
+export default Management

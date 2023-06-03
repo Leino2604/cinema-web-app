@@ -12,7 +12,8 @@ import ScheduleSelection from './pages/ScheduleSelection';
 import SeatSelection from './pages/SeatSelection/SeatSelection';
 import Payment from './pages/Payment';
 import PaymentSuccess from './pages/PaymentSuccess';
-import MovieManagement from './pages/MovieManagement'
+import Management from './pages/Management'
+// import FoodManagement from './pages/FoodManagement'
 // import Register from "./pages/Login_Reset_Recover_Protect/components/Register"
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -43,7 +44,7 @@ function App() {
           <Route path="/payment/success" element={<Layout> <PaymentSuccess /> </Layout>} />
           <Route path="/revenue" element={<Layout> <Revenue /> </Layout>} />
           
-          <Route path="/moviemanagement" element={<Layout> <MovieManagement/> </Layout>} />
+          <Route path="/management" element={<Layout> <Management/> </Layout>} />
           {/* <Route path="/register" element={<Register/>} /> */}
           
           

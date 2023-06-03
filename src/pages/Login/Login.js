@@ -4,9 +4,12 @@ import {useState} from "react"
 import { useNavigate  } from 'react-router-dom';
 import { useDispatch} from "react-redux";
 import { loginUser} from "../../redux/apiRequest"
-const Login = () => {
+// import { useSelector} from "react-redux";
+
+const Login =  () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  // const user = useSelector((state) => console.log(state))
   
   const navigate = useNavigate ();
   const dispatch = useDispatch();
@@ -15,7 +18,7 @@ const Login = () => {
     const newUser = {
       username: username,
       password: password,
-    };
+    }
     loginUser(newUser, dispatch, navigate)
   }
 
@@ -29,14 +32,19 @@ const Login = () => {
                   type="text" 
                   placeholder="Enter your username"
                   onChange={(e) => setUsername(e.target.value)}
+                  required
                 />
 
                 <input
                    className = {styles.input}
                    type="password" 
+                   minLength="6"
                    placeholder="Enter your password"
+                  
                    onChange = {(e) => setPassword(e.target.value)}
+                  required
                 />
+               
                 <input className = {`${styles.input} ${styles.signIn}` } type="submit" value = "Log in"/> 
             </form>
             <p className={styles.content}>  Don't have an account yet? </p>
