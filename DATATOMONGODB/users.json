@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "64761e5705a12a18ff3b3e9a"
+  },
+  "username": "testuser1",
+  "email": "testuser1@gmail.com",
+  "password": "$2b$10$cj8jA5gxhhVV3nFTrbIwkuKDDOqe22nlIJSOuCkfv5QtnrR7A3NSm",
+  "role": "Guest",
+  "createdAt": {
+    "$date": "2023-05-30T16:03:35.606Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-30T16:03:35.606Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6476ea24667c16883f5cb35f"
+  },
+  "username": "admin",
+  "email": "dung@hcmut.edu.vn",
+  "password": "$2b$10$fsiYU0WpAt/P4riLyOrL0OTnAi0ObfnMXhacV6MJnD.JQ.pFaD7Ma",
+  "phone": "0869191023",
+  "dob": {
+    "$date": "2023-05-25T00:00:00.000Z"
+  },
+  "role": "Admin",
+  "createdAt": {
+    "$date": "2023-05-31T06:33:08.800Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-31T06:33:08.800Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "647ad248c0c99b59d20a33c9"
+  },
+  "username": "testuser2",
+  "email": "dung2@gmail.com",
+  "password": "$2b$10$SnAHfNQW4rU3oqSQwiRvf.95h3CQfZSlDdqN7IjEsCSK9rbOlI4MW",
+  "phone": "0869191023",
+  "dob": {
+    "$date": "2002-10-21T00:00:00.000Z"
+  },
+  "role": "Manage",
+  "createdAt": {
+    "$date": "2023-06-03T05:40:24.610Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-03T05:40:24.610Z"
+  },
+  "__v": 0
+}]

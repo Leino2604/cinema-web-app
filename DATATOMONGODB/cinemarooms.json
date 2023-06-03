@@ -1,0 +1,106 @@
+[{
+  "_id": {
+    "$oid": "64798bb80a8a97157366fa38"
+  },
+  "roomNumber": 1,
+  "roomClass": "Gold",
+  "movies": []
+},{
+  "_id": {
+    "$oid": "64798bb80a8a97157366fa39"
+  },
+  "roomNumber": 101,
+  "roomClass": "Platinum",
+  "movies": []
+},{
+  "_id": {
+    "$oid": "64798bb80a8a97157366fa3a"
+  },
+  "roomNumber": 201,
+  "roomClass": "Regular",
+  "movies": []
+},{
+  "_id": {
+    "$oid": "64798bb80a8a97157366fa3b"
+  },
+  "roomNumber": 301,
+  "roomClass": "Gold",
+  "movies": []
+},{
+  "_id": {
+    "$oid": "64798bb80a8a97157366fa3c"
+  },
+  "roomNumber": 401,
+  "roomClass": "Regular",
+  "movies": []
+},{
+  "_id": {
+    "$oid": "64798bb80a8a97157366fa3d"
+  },
+  "roomNumber": 501,
+  "roomClass": "Regular",
+  "movies": []
+},{
+  "_id": {
+    "$oid": "64798bb80a8a97157366fa3e"
+  },
+  "roomNumber": 601,
+  "roomClass": "Platinum",
+  "movies": []
+},{
+  "_id": {
+    "$oid": "64798bb80a8a97157366fa3f"
+  },
+  "roomNumber": 701,
+  "roomClass": "Gold",
+  "movies": []
+},{
+  "_id": {
+    "$oid": "64798bb80a8a97157366fa40"
+  },
+  "roomNumber": 801,
+  "roomClass": "Regular",
+  "movies": []
+},{
+  "_id": {
+    "$oid": "64798bb80a8a97157366fa41"
+  },
+  "roomNumber": 901,
+  "roomClass": "Gold",
+  "movies": []
+},{
+  "_id": {
+    "$oid": "64798bb80a8a97157366fa42"
+  },
+  "roomNumber": 1001,
+  "roomClass": "Platinum",
+  "movies": []
+},{
+  "_id": {
+    "$oid": "64798bb80a8a97157366fa43"
+  },
+  "roomNumber": 1101,
+  "roomClass": "Regular",
+  "movies": []
+},{
+  "_id": {
+    "$oid": "64798bb80a8a97157366fa44"
+  },
+  "roomNumber": 1201,
+  "roomClass": "Regular",
+  "movies": []
+},{
+  "_id": {
+    "$oid": "64798bb80a8a97157366fa45"
+  },
+  "roomNumber": 1301,
+  "roomClass": "Platinum",
+  "movies": []
+},{
+  "_id": {
+    "$oid": "64798bb80a8a97157366fa46"
+  },
+  "roomNumber": 1401,
+  "roomClass": "Gold",
+  "movies": []
+}]
