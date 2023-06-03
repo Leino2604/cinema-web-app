@@ -5,6 +5,7 @@
 .headerReve {
     display: flex;
     padding: 20px 50px 0 50px;
+    align-items: center;
 
     .title {
         text-transform: uppercase;
@@ -29,14 +30,28 @@
             cursor: pointer;
         }
     }
+
+    .accept {
+        display: flex;
+        margin-left: 10px;
+        margin-bottom: 15px;
+        // box-sizing: border-box;
+    }
+}
+
+.viewDetail {
+    margin-left: 50px;
+    margin-bottom: 20px;
 }
 
 .blockRevenue {
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 20px 50px;
+    padding: 25px 50px;
     justify-content: space-between;
+    background-color: #ccc;
+    border-radius: 10px;
 
     .revenueItem {
         text-align: center;
@@ -64,18 +79,22 @@
 .revenueTotal {
     display: flex;
     height: 400px;
-    padding: 0 50px;
+    padding: 10px 50px;
+    margin: 30px 0;
     margin-bottom: 50px;
+    border: 1px solid #ccc;
+
     .chart {
-        width: 65%;
+        width: 60%;
+        border-right: 1px solid #000;
     
     
         // background: green;
     }
 
-    .trending {
+    .revenueTheater {
         margin-left: 50px;
-        width: 30%;
+        width: 35%;
         border: 1px solid #ccc;
         border-radius: 10px;
         
@@ -94,11 +113,13 @@
                 font-size: 20px;
                 padding-left: 15px;  
                 padding-top: 25px; 
+                // display: flex;
                 
                 .attr {
-                    
+                    width: 40%;
                 }
                 .valueSale {
+                    padding-left: 30px;
                     font-weight: 600;
                 }
             }
@@ -109,7 +130,7 @@
 
 .top {
     flex: 1;
-    padding-left: 30px;
+    // padding-left: 0px;
 }
 
 .revenueDetail {
@@ -118,13 +139,20 @@
 }
 
 .tableChartContainer {
-    margin: 30px 0;
+    margin: 10px 0;
     border-radius: 20px;
     border: 1px solid #ccc;
+
+    .title {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        margin: 30px 0;
+    }
 }
 
 .tableChart {
     display: flex;
     flex-direction: row;
-    padding-left: 10px;
+    // padding-left: 10px;
 }
