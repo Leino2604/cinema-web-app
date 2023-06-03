@@ -39,7 +39,7 @@ function App() {
           <Route path="/" element={ <Layout> <Home /> </Layout>}/> 
           <Route path="/home" element={ <Layout> <Home /> </Layout>}/> 
           <Route path="/schedule" element={ <Layout> <ScheduleSelection /> </Layout>} />
-          <Route path="/seatselection" element={ <Layout> <SeatSelection /> </Layout>} />
+          <Route path="/seats" element={ <Layout> <SeatSelection /> </Layout>} />
           <Route path="/payment" element={<Layout> <Payment /> </Layout>} />
           <Route path="/payment/success" element={<Layout> <PaymentSuccess /> </Layout>} />
           <Route path="/revenue" element={<Layout> <Revenue /> </Layout>} />
